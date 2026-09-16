@@ -1,8 +1,11 @@
+<div align="center">
+
+# 🔐 PENETRATION TESTING REPORT
 ## Footprinting & Network Scanning Phases
 
-**W2-PM-FINAL | Cybersecurity | Networkwalks**
+</div>
 
-| **Pentester Name (Cybersecurity Professional)** | Pritesh Kalsariya |
+| **Author** | Pritesh Kalsariya |
 |---|---|
 | **Program/Batch** | B083-Networkwalks |
 | **Date** | 13 Sept 2026 |
@@ -123,16 +126,80 @@ I first used the Windows `ipconfig` command to identify my local IP address and 
 
 The example results provided in the practical identified four live hosts:
 
-- `10.0.0.1`
-- `10.0.0.4`
-- `10.0.0.19`
-- `10.0.0.5`
+- `10.17.252.177`
+- `10.17.252.27`
 
-The example results also included four MAC addresses.
 
 After completing the scan, I opened the **Topology** section in Zenmap, enabled the legend, and saved the network topology in PDF format as required by the practical task.
 
 ---
+
+# 5. Risk Analysis / Impact
+
+Based on the information collected during the footprinting and network scanning activities, I identified the following potential security observations.
+
+| **#** | **Risk / Finding** | **Evidence / Observation** | **Potential Impact** | **Risk Level** |
+|---:|---|---|---|:---:|
+| 1 | Web technology information exposed | WhatWeb identified WordPress and WP Download Manager | Attackers may use exposed technology/version information to identify software requiring further security review | **🟠 Medium** |
+| 2 | Server IP address identifiable | Nslookup resolved the domain to `192.232.216.135` | Provides information about the network location of the web service | **🟢 Low** |
+| 3 | HTTP technical information exposed | Curl returned HTTP response headers and exposed `/wp-json/` | May assist technology fingerprinting and further enumeration | **🟢 Low** |
+| 4 | WAF technology identifiable | Wafw00f identified ModSecurity (SpiderLabs) | Reveals information about the web application's security architecture | **🟢 Low** |
+| 5 | DNS infrastructure information exposed | DNSRecon identified DNS, mail, and service-related records | DNS information can help build a broader infrastructure profile | **🟠 Medium** |
+| 6 | Multiple live hosts visible on local network | Zenmap identified four live hosts in the example network | Unknown or unauthorized devices may potentially be present on a network | **🟠 Medium** |
+
+### Risk Level Key
+
+- 🔴 **Critical**
+- 🟠 **Medium**
+- 🟢 **Low**
+
+> **Note:** The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
+
+The practical exercises primarily involved **information gathering and host discovery**. No exploitation or vulnerability validation was performed as part of these two modules.
+
+Therefore, the presence of information such as a software version, IP address, or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
+
+---
+
+# 6. Recommendations
+
+Based on the observations from these activities, I recommend the following security improvements:
+
+### 1. Review Publicly Exposed Technology Information
+
+Organizations should regularly review what information about their web technologies, CMS platforms, and plugins is publicly visible.
+
+### 2. Keep Software Updated
+
+CMS platforms, plugins, and other web technologies should be regularly updated and reviewed against current security advisories.
+
+### 3. Review HTTP Headers
+
+HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
+
+### 4. Review DNS Records Regularly
+
+DNS records should be checked periodically to ensure that only required information and services are publicly exposed.
+
+### 5. Properly Configure and Monitor the WAF
+
+Keep the WAF (ModSecurity) enabled and properly configured. WAF rules should be regularly reviewed, tuned, and monitored.
+
+### 6. Perform Regular Internal Network Discovery
+
+Organizations should periodically scan their own networks to identify active devices and maintain visibility of the internal environment.
+
+### 7. Investigate Unknown Devices
+
+Any unexpected device discovered during network scanning should be investigated and verified.
+
+### 8. Maintain Network Documentation
+
+Network topology and device information should be documented and updated regularly.
+
+### 9. Perform Security Testing with Authorization
+
+Reconnaissance and scanning should only be performed against systems and networks where appropriate authorization has been provided.
 
 # 7. Conclusion
 
@@ -156,13 +223,13 @@ Finally, I learned that reconnaissance and scanning must always be performed wit
 
 > Add your screenshots and evidence below.
 
-![Evidence 1](./images/evidence-1.png)
+![Evidence 1](1_whois_Reconnaissance.png)
 
-![Evidence 2](./images/evidence-2.png)
+![Evidence 2](2_whatweb_Reconnaissance.png)
 
-![Evidence 3](./images/evidence-3.png)
+![Evidence 3](3_nslookup_Reconnaissance.png)
 
-![Evidence 4](./images/evidence-4.png)
+![Evidence 4](4_curl_Reconnaissance.png)
 
 ---
 
@@ -177,9 +244,4 @@ Cybersecurity Professional — B083
 
 ## 📌 Project Information
 
-| **Field** | **Details** |
-|---|---|
-| **Program Name** | Cybersecurity Program at Networkwalks |
-| **Week** | 02 |
-| **Focus** | Footprinting & Network Scanning |
-| **Repository** | GitHub |
+**Program Name:** Cybersecurity Program at Networkwalks | **Week:** 02 | **Focus:** Footprinting & Network Scanning | **Repository** GitHub |
