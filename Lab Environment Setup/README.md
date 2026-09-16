@@ -63,17 +63,6 @@ It can be used for activities such as:
 - Exploitation practice
 - Security-tool experimentation
 
-⚠️ **Important:** This laboratory must only be used for systems that you own or have explicit permission to test. Do not use the lab or its tools to attack unauthorized systems.
-
----
-
-## 🏗️ Lab Architecture
-
-![](1-screenshot-title-image.png)
-
-
-Additional target machines can be added to the same virtual network in future projects.
-
 ---
 
 ## ⚙️ Lab Configuration
@@ -121,7 +110,7 @@ IPv4 Prefix:  10.0.0.0/24
 DHCP:         Enabled
 IPv6:         Disabled
 
-![](2-screenshot-network-settings-1.png)
+![](https://github.com/pritesh460/Cybersecurity_Lab/blob/main/Lab%20Environment%20Setup/1-screenshot-network-settings.png)
 
 A **NAT Network** was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
 
@@ -148,7 +137,7 @@ The VM was allocated:
 ```text
 RAM: 2048 MB
 ```
-![](3-screenshot-kali-linux.png)
+![](https://github.com/pritesh460/Cybersecurity_Lab/blob/main/Lab%20Environment%20Setup/2-screenshot-kali-linux.png)
 A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
 
 
@@ -170,7 +159,7 @@ DNS: 8.8.8.8
 
 A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
 
-![](4-screenshot-kali-network-settings.png)
+![](https://github.com/pritesh460/Cybersecurity_Lab/blob/main/Lab%20Environment%20Setup/3-screenshot-kali-network-settings.png)
 
 ---
 
@@ -262,7 +251,7 @@ I learned that documenting commands, configuration, screenshots, problems, and s
 # 👤 Author
 
 **Waqas Karim**\
-Cybersecurity Professional B082
+Cybersecurity Professional B083
 
 LinkedIn: [https://www.linkedin.com/in/pritesh-kalsariya-4529a833b/](https://www.linkedin.com/in/pritesh-kalsariya-4529a833b/)
 
