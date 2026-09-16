@@ -99,6 +99,7 @@ The provided result identified:
 
 ```text
 192.232.216.135
+```
 
 ### Curl
 
@@ -167,8 +168,8 @@ Finally, I learned that reconnaissance and scanning must always be performed wit
 
 ## 👤 Author
 
-**Waqas Karim CCIE**  
-Cybersecurity Professional — B082
+**pritesh Kalsariya**  
+Cybersecurity Professional — B083
 
 **LinkedIn:** [www.linkedin.com/in/pritesh-kalsariya-4529a833b](https://www.linkedin.com/in/pritesh-kalsariya-4529a833b)
 
