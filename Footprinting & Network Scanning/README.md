@@ -1,273 +1,101 @@
-<div align="center">
+## Footprinting & Network Scanning Phases
 
-# 🔐 Cybersecurity Lab Environment Setup
+**W2-PM-FINAL | Cybersecurity | Networkwalks**
 
-**Building an isolated virtual lab for penetration testing and ethical hacking practice**
-</div>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Skill-Cybersecurity-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/Ver-Virtualbox%20v7.2-0070C0?style=flat-square&labelColor=000000" />
-  <img src="https://img.shields.io/badge/Kali%20Linux-v2026.2-E87500?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Skill-Linux-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/Network-10.0.0.0%2F24-238F89?style=flat-square&labelColor=000000" />
-  <img src="https://img.shields.io/badge/Penetration%20Testing-C00000?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Skill-Virtualization-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/GitHub-404040?style=flat-square&labelColor=0070C0&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kali%20Linux-404040?style=flat-square&labelColor=C00000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/NetworkWalks-404040?style=flat-square&labelColor=C00000" />
-  <img src="https://img.shields.io/badge/Ethical%20Hacking-E87500?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Waqas%20Karim%20CCIE-C00000?style=flat-square" />
-</p>
+| **Pentester Name (Cybersecurity Professional)** | Pritesh Kalsariya |
+|---|---|
+| **Program/Batch** | B083-Networkwalks |
+| **Date** | 13 Sept 2026 |
+| **Modules Completed** | W2-PM1 (Multiple Kali Tools)<br>W2-PM5 (Zenmap Scanning) |
+| **Client/Target** | 1. Networkwalks (secured written permission already)<br>2. My own local LAN Network |
+| **Permission Secured from Client?** | Yes |
+| **Phases Covered** | **Phase 1:** Reconnaissance & Footprinting<br>**Phase 2:** Scanning & Network Discovery |
 
 ---
 
-## 📌 Project Overview
+# 1. Liability Disclaimer
 
-This project focuses on setting up a **virtual cybersecurity and penetration-testing laboratory** using VirtualBox and Kali Linux.
+I have performed these activities only on systems and devices where I had secured written permission or on devices/systems that I own myself.
 
-The purpose of the lab is to create a controlled environment where cybersecurity tools, network scanning, reconnaissance, vulnerability assessment, and other security-testing activities can be performed safely and repeatedly.
+All materials are provided for educational and research purposes only. Do not use anything from this report to break the law.
 
-The lab is configured on a private virtual network so that additional machines can be added later and used as targets for authorized security testing.
+The instructor, authors, and Networkwalks are not responsible for misuse of the information provided in this report. Every action taken using this knowledge is the user's own responsibility.
 
----
-
-
-## 🎯 Objectives
-
-The main objectives of this project are to:
-
-- Install and configure VirtualBox.
-- Install/import Kali Linux as a virtual machine.
-- Create a private **NAT Network** for the cybersecurity lab.
-- Configure network connectivity for Kali Linux.
-- Assign a consistent IP address to the Kali VM.
-- Verify network connectivity and DNS resolution.
-- Take a clean VM snapshot for recovery.
-- Document the complete setup process.
-- Prepare the environment for future cybersecurity projects.
+Unauthorized access to computer systems can result in criminal charges, financial penalties, loss of employment, and other legal consequences.
 
 ---
 
-## 🛡️ Purpose of the Lab
+# 2. Introduction
 
-The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
+This report covers the **footprinting of the networkwalks.com domain** using multiple Kali Linux tools (W2-PM1) and **scanning of my own local network** using Zenmap (W2-PM5).
 
-It can be used for activities such as:
+One module covers the footprinting phase and the other covers the scanning phase. Together, they demonstrate how a security professional can move from gathering publicly available information to discovering live hosts on a network.
 
-- Network reconnaissance
-- Port scanning
-- Vulnerability assessment
-- Packet analysis
-- Web security testing
-- Exploitation practice
-- Security-tool experimentation
+This report represents the **Week 2** part of my ongoing cybersecurity internship program at Networkwalks.
 
-⚠️ **Important:** This laboratory must only be used for systems that you own or have explicit permission to test. Do not use the lab or its tools to attack unauthorized systems.
+All commands were performed using **Kali Linux** for footprinting and a **Windows PC with Zenmap** installed for network scanning.
 
----
+Each activity includes:
 
-## 🏗️ Lab Architecture
-
-![](1-screenshot-title-image.png)
-
-
-Additional target machines can be added to the same virtual network in future projects.
+- The command or procedure used
+- The observed result
+- Screenshot evidence
+- Security relevance from a penetration-testing perspective
 
 ---
 
-## ⚙️ Lab Configuration
+# 3. Tools Used
 
-| 🧩 Component       | ⚙️ Configuration   |
-| ------------------ | ------------------  |
-| 🖥️ Host OS         | Windows 10         |
-| 🧠 Host RAM        | 8 GB               |
-| ⚡ Processor       | Intel Core i7      |
-| 🧰 Hypervisor      | VirtualBox 7.2  |
-| 🐉 Security OS     | Kali Linux 2026.2  |
-| 🧠 Kali RAM        | 2048 MB            |
-| 🌐 Virtual Network | NAT Network        |
-| 📡 Network Address | 10.0.0.0/24        |
-| 🐧 Kali IP Address | 10.0.0.2/24        |
-| 🚪 Default Gateway | 10.0.0.1           |
-| 🌍 DNS Server      | 8.8.8.8            |
-| 🔮 Future VM Range | 10.0.0.3–10.0.0.99 |
+| **Tool** | **Purpose** |
+|---|---|
+| **Kali Linux & Windows** | Operating systems used for reconnaissance and scanning activities |
+| **WHOIS** | Find publicly available domain registration details, dates, and name servers |
+| **WhatWeb** | Fingerprint web technologies such as servers, CMS platforms, plugins, and IP information |
+| **Nslookup** | Resolve a domain name to its IP address using DNS |
+| **Curl -I** | Inspect HTTP response headers from a website |
+| **Wafw00f** | Detect whether a Web Application Firewall protects the website |
+| **DNSRecon** | Enumerate DNS records such as NS, MX, SPF, TXT, and SRV records |
+| **Zenmap (Nmap GUI)** | Scan the local subnet to identify live hosts, IP addresses, and MAC addresses |
+| **Windows CMD** | Identify local IP address and MAC address information |
 
 ---
 
-# 🪜 Lab Setup Procedure
+# 4. Activities Performed
 
-## Step 1. Install 7-Zip
+## 4.1 Footprinting & Reconnaissance
 
-7-Zip was installed to extract the Kali Linux virtual-machine package, which may be distributed as a `.7z` archive.
+I performed reconnaissance against the **networkwalks.com** domain using six Kali Linux tools:
 
-**Tool:** 7-Zip
+- **WHOIS**
+- **WhatWeb**
+- **Nslookup**
+- **Curl**
+- **Wafw00f**
+- **DNSRecon**
 
----
+Each tool was used to collect a different type of information about the target.
 
-## Step 2. Install VirtualBox
+### WHOIS
 
-VirtualBox was installed as the hypervisor.
+First, I used **WHOIS** to obtain publicly available domain registration information and identify the domain's name servers.
 
----
+The results provided information about the domain registration and hosting infrastructure.
 
-## Step 3. Create the NAT Network
+### WhatWeb
 
-A dedicated NAT Network was created in VirtualBox.
+I then used **WhatWeb** to identify technologies used by the website.
 
-Configuration:
-Network Name: NatNetwork
-IPv4 Prefix:  10.0.0.0/24
-DHCP:         Enabled
-IPv6:         Disabled
+The results identified:
 
-![](2-screenshot-network-settings-1.png)
+- **WordPress 7.0.4**
+- **WP Download Manager 3.3.58**
+- Other information exposed by the website
 
-A **NAT Network** was selected because multiple virtual machines connected to the same NAT Network can communicate with one another while also having outbound network connectivity.
+### Nslookup
 
-This will allow future attacker and target VMs to communicate within the lab.
+Using **Nslookup**, I resolved the domain name to its IP address.
 
-
----
-
-## Step 4. Import Kali Linux
-
-The Kali Linux virtual machine was downloaded from the official Kali Linux website and imported into VirtualBox.
-
-The VM network adapter was configured as follows:
+The provided result identified:
 
 ```text
-Adapter 1
-Attached to: NAT Network
-Network:     NatNetwork
-Adapter Type: Intel PRO/1000 MT Desktop
-```
-
-The VM was allocated:
-
-```text
-RAM: 2048 MB
-```
-![](3-screenshot-kali-linux.png)
-A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
-
-
-
----
-
-## Step 5. Configure the Kali Linux Network
-
-The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
-
-Example configuration:
-
-```text
-IP Address: 10.0.0.2
-Subnet Mask: 255.255.255.0
-Gateway: 10.0.0.1
-DNS: 8.8.8.8
-```
-
-A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
-
-![](4-screenshot-kali-network-settings.png)
-
----
-
-## Step 6. Create a Clean VM Snapshot
-
-After completing the initial configuration, a VirtualBox snapshot was created.
-
-Example snapshot name:
-
-```text
-Clean Kali - Network Setup
-```
-
-The snapshot represents the clean baseline of the laboratory.
-
-If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
-
-
----
-
-# 🔎 Lab Verification
-
-| ✅ Test                        | 🧾 Command                      | 🎯 Expected Result              |
-| ----------------------------- | ------------------------------- | ------------------------------- |
-| 🌐 Check IP address           | `ip a`                          | Correct Kali IP displayed       |
-| 📡 Test gateway               | `ping 10.0.0.1`                 | Successful replies              |
-| 🌍 Test Internet connectivity | `ping 8.8.8.8`                  | Successful replies              |
-| 🔎 Test DNS resolution        | `nslookup networkwalks.com`     | Domain resolves                 |
-| 🧰 Verify Nmap                | `nmap --version`                | Nmap version displayed          |
-| 🔄 Verify snapshot            | Restore snapshot and run `ip a` | Baseline configuration restored |
-
-### Example Results
-
-```text
-IP Address:
-10.0.0.2/24
-
-Gateway:
-10.0.0.1
-
-DNS:
-8.8.8.8
-```
-
----
-
-# 💡 What I Learned
-
-Through this project, I learned how to create and configure a virtual environment for cybersecurity practice.
-
-The most important concepts I learned include:
-
-### 1. NAT vs NAT Network
-
-A standard NAT configuration and a NAT Network serve different purposes.
-
-A NAT Network allows multiple VMs connected to the same virtual network to communicate with one another while providing network address translation for external connectivity.
-
-This makes it useful for building a multi-machine cybersecurity laboratory.
-
-### 2. Virtual Machine Networking
-
-I learned how VirtualBox virtual network adapters connect virtual machines to different types of networks and how network configuration affects communication between machines.
-
-### 3. Static IP Configuration
-
-I learned how to configure and verify IPv4 addressing, subnet masks, gateways, and DNS settings in Kali Linux.
-
-### 4. VM Snapshots
-
-I learned that a clean snapshot should be created **before performing risky or experimental activities**.
-
-This provides a known-good recovery point for future cybersecurity exercises.
-
-### 5. Documentation
-
-I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
-
----
-
-# 🔗 Tools & Resources
-
-- **7-Zip:** [https://7-zip.org/download.html](https://7-zip.org/download.html)
-- **VirtualBox:** [https://virtualbox.org/wiki/Downloads](https://virtualbox.org/wiki/Downloads)
-- **Kali Linux:** [https://kali.org/get-kali](https://kali.org/get-kali)
-
----
-
-# 👤 Author
-
-**Waqas Karim**\
-Cybersecurity Professional B082
-
-LinkedIn: [https://www.linkedin.com/in/pritesh-kalsariya-4529a833b/](https://www.linkedin.com/in/pritesh-kalsariya-4529a833b/)
-
----
-
-## 📌 Project Information
-
-**Program Name:** Cybersecurity at Networkwalks | **Week:** 01 | **Project:** Cybersecurity & Pentesting Lab Setup | **Repository:** GitHub
+192.232.216.135
