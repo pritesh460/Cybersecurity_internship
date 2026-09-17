@@ -5,6 +5,7 @@
 
 </div>
 
+| **Field** | Details |
 |---|---|
 | **Author** | Pritesh Kalsariya |
 | **Program/Batch** | B083-Networkwalks |
