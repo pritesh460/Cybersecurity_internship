@@ -5,14 +5,14 @@
 
 </div>
 
-| **Author** | Pritesh Kalsariya |
 |---|---|
+| **Author** | Pritesh Kalsariya |
 | **Program/Batch** | B083-Networkwalks |
 | **Date** | 13 Sept 2026 |
 | **Modules Completed** | W2-PM1 (Multiple Kali Tools)<br>W2-PM5 (Zenmap Scanning) |
 | **Client/Target** | 1. Networkwalks (secured written permission already)<br>2. My own local LAN Network |
 | **Permission Secured from Client?** | Yes |
-| **Phases Covered** | **Phase 1:** Reconnaissance & Footprinting<br>**Phase 2:** Scanning & Network Discovery |
+| **Phases Covered** | **Phase 1:** Reconnaissance & Footprinting<br>**Phase 2:** Scanning & Network Discovery<br>**Phase 3-5:** In Progress |
 
 ---
 
@@ -153,8 +153,6 @@ Based on the information collected during the footprinting and network scanning 
 - 🟠 **Medium**
 - 🟢 **Low**
 
-> **Note:** The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
-
 The practical exercises primarily involved **information gathering and host discovery**. No exploitation or vulnerability validation was performed as part of these two modules.
 
 Therefore, the presence of information such as a software version, IP address, or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
@@ -221,8 +219,6 @@ Finally, I learned that reconnaissance and scanning must always be performed wit
 
 ### 📸 Screenshots & Evidence
 
-> Add your screenshots and evidence below.
-
 ![Evidence 1](1_whois_Reconnaissance.png)
 
 ![Evidence 2](2_whatweb_Reconnaissance.png)
@@ -230,6 +226,14 @@ Finally, I learned that reconnaissance and scanning must always be performed wit
 ![Evidence 3](3_nslookup_Reconnaissance.png)
 
 ![Evidence 4](4_curl_Reconnaissance.png)
+
+![Evidence 5](5_wafw00f_Reconnaissance.png)
+
+![Evidence 6](6_dnsrecon_Reconnaissance.png)
+
+![Evidence 7](7_Network_Scanning.png)
+
+![Evidence 8](8_topology_Network_Scanning.png)
 
 ---
 
