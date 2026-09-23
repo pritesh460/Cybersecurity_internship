@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 Password Cracking with JTR and Networkwalks Tools 🔓 
+# 🔐 Password Cracking with JTR and Networkwalks Tools  
 
 </div>
 
@@ -61,24 +61,13 @@ Select **Start new attack** and wait for John the Ripper to identify the matchin
 
 Open the locked PDF and enter the recovered password. Confirm that the PDF opens successfully.
 
-### 📸 Evidence Collected
+### 📸 Screenshots
 
-Screenshots are stored in:
+![Evidence 1](01_John_installation.png)
 
-```text
-Screenshots/
-└── Module-1-JTR/
-```
+![Evidence 2](02_John_hash_calculator.png)
 
-Evidence includes:
-
-* `john.exe` configuration
-* PDF hash extraction
-* `hash1.txt`
-* Hash loaded into Johnny
-* JTR attack in progress
-* Recovered password
-* Successfully opened PDF
+![Evidence 1](03_John_password_cracke.png)
 
 ---
 
@@ -106,23 +95,13 @@ Open the locked PDF and enter the cracked password.
 
 In this lab, the recovered password was **`password1`**, and the PDF opened successfully.
 
-### 📸 Evidence Collected
+### 📸 Screenshots
 
-Screenshots are stored in:
+![Evidence 1](04_Hash_Calculator.png)
 
-```text
-Screenshots/
-└── Module-2-Networkwalks/
-```
+![Evidence 2](05_password_cracke.png)
 
-Evidence includes:
-
-* Networkwalks Hash Calculator
-* Extracted PDF hash
-* Password Cracker
-* Cracking process
-* Recovered password
-* Successfully opened PDF
+![Evidence 1](06_Password-Recovered.png)
 
 ---
 
@@ -132,15 +111,16 @@ Below are the successful password cracks and the corresponding flags captured du
 
 | Filename         | Password    | Flag                                      |
 | ---------------- | ----------- | ----------------------------------------- |
-| `My-Locked-PDF1` | `password1` | `nw{networkwalks_flag1_jtr_270521_1}`     |
-| `My-Locked-PDF2` | `password1` | `nw{networkwalks_persistence_jtr_270521}` |
-| `My-Locked-PDF3` | `1qaz2wsx`  | `nw{networkwalks_flag_260821_1}`          |
+| `My Locked PDF1` | `good-luck` | `nw{cybersecurity_flag_captured_2608}`     |
+| `My Locked PDF2` | `password1` | `nw{networkwalks_persistence_jtr_270521`  |
+| `My Locked PDF3` | `1qaz2wsx`  | `nw{networkwalks_flag_260821_1}`          |
 
 ---
 
-🎯 Objectives
+# 🎯 Objectives
 
 The objective of this project was to perform password cracking on protected PDF files in a controlled cybersecurity lab environment. The task involved extracting PDF password hashes and using John the Ripper (JTR) with Johnny GUI, along with the Networkwalks Hash Calculator and Password Cracker, to recover the passwords. The recovered passwords were then verified by opening the protected PDF files, and the successful results and flags were documented as evidence.
+
 ---
 
 ## 👤 Author
@@ -154,4 +134,4 @@ Cybersecurity Professional — B083
 
 ## 📌 Project Information
 
-**Program Name:** Cybersecurity Program at Networkwalks | **Week:** 03 | **Modules:** Password Cracking | **Repository** GitHub |
+**Program Name:** Cybersecurity Program at Networkwalks | **Week:** 03 | **Modules:** Password Cracking 🔓 | **Repository** GitHub |
