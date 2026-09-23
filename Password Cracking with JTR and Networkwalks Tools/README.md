@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 Password Cracking with JTR and Networkwalks Tools 🔐 
+# 🔐 Password Cracking with JTR and Networkwalks Tools 🔓 
 
 </div>
 
@@ -136,6 +136,11 @@ Below are the successful password cracks and the corresponding flags captured du
 | `My-Locked-PDF2` | `password1` | `nw{networkwalks_persistence_jtr_270521}` |
 | `My-Locked-PDF3` | `1qaz2wsx`  | `nw{networkwalks_flag_260821_1}`          |
 
+---
+
+🎯 Objectives
+
+The objective of this project was to perform password cracking on protected PDF files in a controlled cybersecurity lab environment. The task involved extracting PDF password hashes and using John the Ripper (JTR) with Johnny GUI, along with the Networkwalks Hash Calculator and Password Cracker, to recover the passwords. The recovered passwords were then verified by opening the protected PDF files, and the successful results and flags were documented as evidence.
 ---
 
 ## 👤 Author
