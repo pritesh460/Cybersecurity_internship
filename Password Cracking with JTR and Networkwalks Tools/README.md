@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 Password Cracking with JTR and Networkwalks Tools
+# 🔐 Password Cracking with JTR and Networkwalks Tools 🔐 
 
 </div>
 
@@ -32,8 +32,6 @@ Password cracking was performed in a controlled lab environment to understand pa
 ---
 
 # 🔹 Module 1 — Password Cracking with JTR
-
-### 🎯 Objective
 
 Recover the password of a protected PDF using **John the Ripper (JTR)** and **Johnny GUI**.
 
@@ -85,8 +83,6 @@ Evidence includes:
 ---
 
 # 🔹 Module 2 — Password Cracking with Networkwalks Tools
-
-### 🎯 Objective
 
 Recover the password of a protected PDF using the **Networkwalks Hash Calculator** and **Password Cracker**.
 
@@ -153,4 +149,4 @@ Cybersecurity Professional — B083
 
 ## 📌 Project Information
 
-**Program Name:** Cybersecurity Program at Networkwalks | **Week:** 03 | **Modules:** Password Cracking with JTR and Networkwalks Tools | **Repository** GitHub |
+**Program Name:** Cybersecurity Program at Networkwalks | **Week:** 03 | **Modules:** Password Cracking | **Repository** GitHub |
